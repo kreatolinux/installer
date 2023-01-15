@@ -53,12 +53,6 @@ main() {
 
   printf "\nBuild packages or install them as a binary? (available options: build, binary) [build]: "
   read -r pkginstalltype
-  printf "\nDo you want shadow? [yes]: " 
-  read -r shadow
-  [ "$pkginstalltype" = "build" ] && nyaa b shadow -y
-  [ "$pkginstalltype" = "binary" ] && nyaa i shadow -y
-  pwconv
-  grpconv
   printf "\nDo you use Wi-Fi? [no]: "
   read -r wifi
   if [ "$wifi" = "yes" ]; then
